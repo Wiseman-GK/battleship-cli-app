@@ -1,0 +1,1 @@
+{"type":"module","dependencies":{"readline-sync":"^1.4.10"},"name":"battleship-cli-app","description":"## Introduction","version":"1.0.0","main":"battleships.js","scripts":{"test":"node battleships.js"},"repository":{"type":"git","url":"(https://github.com/Wiseman-GK/battleship-cli-app)"},"author":"WisemanGK","license":"ISC"}
