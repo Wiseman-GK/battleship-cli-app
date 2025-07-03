@@ -69,10 +69,11 @@ function select(){
 function printBoard (board, debug){
   console.table(convert(board, debug));
 }
-printBoard(playBoard, false);
+printBoard(playBoard, true);
+console.log(playBoard);
 
-while (count !== 0){ // this loop continues until all ships are sank which is track by the count variable
-  (function target (){ // this is the function that allows the user to target a space
+while (count !== 0){
+  (function target (){
     if (boardSelect === 'board4x4'){
       const choice = rs.question('Select a space to attack: ', {limit: ['A0', 'A1', 'A2', 'A3', 'B0', 'B1', 'B2', 'B3', 'C0', 'C1', 'C2', 'C3', 'D0', 'D1', 'D2', 'D3']});
       tar = choice;

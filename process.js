@@ -1,4 +1,4 @@
-import {testBoard, board4x4, board5x5, board6x6, large, small} from './boards&ships.js';
+import {testBoard, board4x4, board5x5, board6x6, /*  cLarge, cSmall, */ small, large } from './boards&ships.js';
 import {playBoard} from './battleships.js';
 
 let count = 0;
@@ -71,9 +71,9 @@ function ships (input){
   let shipArr = [];
   for(let g = 0; g < Number(arr[0]); g++){
     if (arr[1] === 'small'){
-      shipArr.push(small);
+      shipArr.push(small());
     } else if (arr[1] === 'large'){
-      shipArr.push(large);
+      shipArr.push(large());
     }
   }
   return shipArr
