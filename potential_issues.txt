@@ -1,5 +1,0 @@
-the potential issues i can see where all the objects with the same name or id value have their hit value change when only one is targeted is in process,js line 167,
-if not that it is how the objects are in the board in which case i will have to change the objects found in boards&ships.js line 135 and line 136.
-
-note; there is some code in there that I am using for debugging on line 91 of battleships.js
-      you can also set the second argument for calling the printBoard function to true to see the placement of ships

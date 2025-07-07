@@ -1,4 +1,4 @@
-import {testBoard, board4x4, board5x5, board6x6, /*  cLarge, cSmall, */ small, large } from './boards&ships.js';
+import {testBoard, board4x4, board5x5, board6x6, small, large } from './boards&ships.js';
 import {playBoard} from './battleships.js';
 
 let count = 0;
@@ -12,39 +12,39 @@ function convert (board, debug) {
       if (debug === true){
         if (board[g][r].id === 0){
           if (board[g][r].hit === true){
-            remade[keys[g]].push('X');
+            remade[keys[g]].push('⚪');
           } else {
             remade[keys[g]].push('-');
           }
         } else if (board[g][r].id === 1){
           if (board[g][r].hit === true){
-            remade[keys[g]].push('!');
+            remade[keys[g]].push('🟠');
           } else {
-            remade[keys[g]].push('L');
+            remade[keys[g]].push('🔵');
           }
         } else if (board[g][r].id === 2){
           if (board[g][r].hit === true){
-            remade[keys[g]].push('!');
+            remade[keys[g]].push('🟣');
           } else {
-            remade[keys[g]].push('S');
+            remade[keys[g]].push('🟢');
           }
         }
       } else {
         if (board[g][r].id === 0){
           if (board[g][r].hit === true){
-            remade[keys[g]].push('X');
+            remade[keys[g]].push('⚪');
           } else {
             remade[keys[g]].push('-');
           }
         } else if (board[g][r].id === 1){
           if (board[g][r].hit === true){
-            remade[keys[g]].push('!');
+            remade[keys[g]].push('🔴');
           } else {
             remade[keys[g]].push('-');
           }
         } else if (board[g][r].id === 2){
           if (board[g][r].hit === true){
-            remade[keys[g]].push('!');
+            remade[keys[g]].push('🔴');
           } else {
             remade[keys[g]].push('-');
           }
@@ -125,7 +125,7 @@ function placeShips(board, ships) {
       }
       if (validPlacement) {
         for (const [r, c] of shipCoords) {
-          board[r][c] = ship;
+          board[r][c] = Object.assign({}, ship);
         }
         placed = true;
       }

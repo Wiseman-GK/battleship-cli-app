@@ -69,8 +69,7 @@ function select(){
 function printBoard (board, debug){
   console.table(convert(board, debug));
 }
-printBoard(playBoard, true);
-console.log(playBoard);
+printBoard(playBoard, false);
 
 while (count !== 0){
   (function target (){
@@ -88,12 +87,21 @@ while (count !== 0){
     }
   })();
   tarConvert(tar);
+  console.clear();
   printBoard(playBoard, false);
-  console.log(playBoard);
 }
 
-
-
-
+if (count === 0){
+  console.log(`
+  ========================================
+  __   _______ _   _   _    _ _____ _   _
+  \\ \\ / /  _  | | | | | |  | |_   _| \\ | |
+   \\ V /| | | | | | | | |  | | | | |  \\| |
+    \\ / | | | | | | | | |/\\| | | | | . ' |
+    | | \\ \\_/ / |_| | \\  /\\  /_| |_| |\\  |
+    \\_/  \\___/ \\___/   \\/  \\/ \\___/\\_| \\_/
+  ========================================
+  `);
+}
 
 export {playBoard};
